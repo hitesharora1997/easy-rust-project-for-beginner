@@ -17,12 +17,12 @@ fn main() {
 
     let mut input = BufReader::new(File::open(args().nth(1).unwrap()).unwrap());
     let output = File::create(args().nth(2).unwrap()).unwrap();
-    let mut decoder = GzEncode::new(output, Decompress::de);
+    let mut decoder = GzDecoder::new(output);
     let start = Instant::now();
 
-    copy(&mut input, &mut encoder).unwrap();
+    copy(&mut input, &mut decoder).unwrap();
 
-    let output = encoder.finish();
+    let output = decoder.finish();
 
     println!(
         "Source len: {:?}",

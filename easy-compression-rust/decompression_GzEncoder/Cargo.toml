@@ -1,5 +1,5 @@
 [package]
-name = "decompression_GzEncoder"
+name = "decompression_gz_encoder"
 version = "0.1.0"
 edition = "2021"
 
