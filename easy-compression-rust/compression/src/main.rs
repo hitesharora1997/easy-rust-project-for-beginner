@@ -15,12 +15,20 @@ fn main() {
         return;
     }
 
-    // let mut input = BufReader::new(File::open(args().nth(1).unwrap()).unwrap());
-    // let output = File::create(args().net(2).unwrap()).unwrap();
-    // let mut encoder = GzEncoder::new(output, Compression::default());
-    // let start = Instant::now();
-    // let output = encoder
-
     let mut input = BufReader::new(File::open(args().nth(1).unwrap()).unwrap());
     let output = File::create(args().nth(2).unwrap()).unwrap();
+    let mut encoder = GzEncoder::new(output, Compression::default());
+    let start = Instant::now();
+
+    copy(&mut input, &mut encoder).unwrap();
+
+    let output = encoder.finish();
+
+    println!(
+        "Source len: {:?}",
+        input.get_ref().metadata().unwrap().len()
+    );
+
+    println!("Target len: {:?}", output.unwrap());
+    println!("Elapsed time: {:?}", start.elapsed());
 }
