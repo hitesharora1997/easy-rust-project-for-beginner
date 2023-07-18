@@ -29,6 +29,13 @@ fn main() {
         input.get_ref().metadata().unwrap().len()
     );
 
-    println!("Target len: {:?}", output.unwrap());
+    println!(
+        "Target len: {:?}",
+        output
+            .expect("issue in the Target")
+            .metadata()
+            .unwrap()
+            .len()
+    );
     println!("Elapsed time: {:?}", start.elapsed());
 }
