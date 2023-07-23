@@ -1,5 +1,5 @@
 use std::fs::File; // when working with the files
-use std::io; // when working with the io operation
+use std::{io, path}; // when working with the io operation
 use zip::ZipArchive;
 
 fn main() {
@@ -22,8 +22,11 @@ fn real_main() -> i32 {
     // To go over all the content
 
     for i in 0..archive.len() {
-        let mut file = archive.by_index(i);
+        let file = archive.by_index(i).unwrap();
+        let outpath = match file.enclosed_name() {
+            Some(path) => path.to_owned(),
+            None => continue,
+        };
     }
-
     return 0;
 }
