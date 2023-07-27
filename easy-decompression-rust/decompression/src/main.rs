@@ -24,7 +24,9 @@ fn real_main() -> i32 {
     for i in 0..archive.len() {
         // go till archive len
         let file = archive.by_index(i).unwrap(); // by index means going through all the files in the compressed files one by one
+
         let outpath = match file.enclosed_name() {
+            // enclosed_name is to change the absolute path of the file to relative path.
             Some(path) => path.to_owned(),
             None => continue,
         };
