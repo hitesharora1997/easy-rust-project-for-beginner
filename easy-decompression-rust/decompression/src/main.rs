@@ -1,5 +1,5 @@
-use std::fs::File; // when working with the files
-use std::io; // when working with the io operation
+use std::fs::{self, File}; // when working with the files
+                           // use std::io; // when working with the io operation
 use zip::ZipArchive;
 
 fn main() {
@@ -38,6 +38,19 @@ fn real_main() -> i32 {
                 println!("File {} comment {} ", i, comment);
             }
         }
+
+        if (file.name()).ends_with('/') {
+            println!("File {} extracted to \"{}\" ", i, outpath.display());
+            fs::create_dir_all(outpath).unwrap();
+        } else {
+            println!(
+                "File {} extracted to \"{}\" ({} bytes)",
+                i,
+                outpath.display(),
+                file.size()
+            );
+        }
     }
+
     return 1;
 }
