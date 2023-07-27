@@ -28,8 +28,16 @@ fn real_main() -> i32 {
         let outpath = match file.enclosed_name() {
             // enclosed_name is to change the absolute path of the file to relative path.
             Some(path) => path.to_owned(), // We are clowning all the data from the Zip file. In this case we are just clowning the path.
-            None => continue,
+            None => continue,              // if we got none we were will continue.
         };
+
+        // Check comments in the files
+        {
+            let comment = file.comment();
+            if !comment.is_empty() {
+                println!("File {} comment {} ", i, comment);
+            }
+        }
     }
     return 1;
 }
