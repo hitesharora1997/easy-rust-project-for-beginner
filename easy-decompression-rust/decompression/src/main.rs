@@ -41,7 +41,7 @@ fn real_main() -> i32 {
 
         if (file.name()).ends_with('/') {
             println!("File {} extracted to \"{}\" ", i, outpath.display());
-            fs::create_dir_all(outpath).unwrap();
+            fs::create_dir_all(outpath.clone()).unwrap();
         } else {
             println!(
                 "File {} extracted to \"{}\" ({} bytes)",
@@ -57,6 +57,15 @@ fn real_main() -> i32 {
             }
             let mut outfile = fs::File::create(&outpath).unwrap();
             io::copy(&mut file, &mut outfile).unwrap();
+        }
+
+        #[cfg(unix)]
+        {
+            use std::os::unix::fs::PermissionsExt;
+
+            if let Some(mode) = file.unix_mode() {
+                fs::set_permissions(&outpath, fs::Permissions::from_mode(mode));
+            }
         }
     }
 
