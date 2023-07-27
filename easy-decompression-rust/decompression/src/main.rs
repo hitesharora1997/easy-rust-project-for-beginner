@@ -1,5 +1,5 @@
 use std::fs::{self, File}; // when working with the files
-                           // use std::io; // when working with the io operation
+use std::io; // when working with the io operation
 use zip::ZipArchive;
 
 fn main() {
@@ -23,7 +23,7 @@ fn real_main() -> i32 {
 
     for i in 0..archive.len() {
         // go till archive len
-        let file = archive.by_index(i).unwrap(); // by index means going through all the files in the compressed files one by one
+        let mut file = archive.by_index(i).unwrap(); // by index means going through all the files in the compressed files one by one
 
         let outpath = match file.enclosed_name() {
             // enclosed_name is to change the absolute path of the file to relative path.
@@ -49,6 +49,14 @@ fn real_main() -> i32 {
                 outpath.display(),
                 file.size()
             );
+
+            if let Some(p) = outpath.parent() {
+                if !p.exists() {
+                    fs::create_dir_all(&p).unwrap();
+                }
+            }
+            let mut outfile = fs::File::create(&outpath).unwrap();
+            io::copy(&mut file, &mut outfile).unwrap();
         }
     }
 
