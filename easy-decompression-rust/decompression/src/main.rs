@@ -64,7 +64,7 @@ fn real_main() -> i32 {
             use std::os::unix::fs::PermissionsExt;
 
             if let Some(mode) = file.unix_mode() {
-                fs::set_permissions(&outpath, fs::Permissions::from_mode(mode));
+                fs::set_permissions(&outpath, fs::Permissions::from_mode(mode)).unwrap();
             }
         }
     }
