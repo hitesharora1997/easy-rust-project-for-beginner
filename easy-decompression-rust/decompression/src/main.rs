@@ -31,7 +31,7 @@ fn real_main() -> i32 {
             None => continue,              // if we got none we were will continue.
         };
 
-        // Check comments in the files
+        // Check comments in the extracted files system
         {
             let comment = file.comment();
             if !comment.is_empty() {
@@ -39,9 +39,10 @@ fn real_main() -> i32 {
             }
         }
 
+        // Check if it's a folder or a file
         if (file.name()).ends_with('/') {
             println!("File {} extracted to \"{}\" ", i, outpath.display());
-            fs::create_dir_all(outpath.clone()).unwrap();
+            fs::create_dir_all(outpath.clone()).unwrap(); // if it's a folder the compiler is gonna use this function
         } else {
             println!(
                 "File {} extracted to \"{}\" ({} bytes)",
@@ -59,6 +60,7 @@ fn real_main() -> i32 {
             io::copy(&mut file, &mut outfile).unwrap();
         }
 
+        // This is for the unix system
         #[cfg(unix)]
         {
             use std::os::unix::fs::PermissionsExt;
