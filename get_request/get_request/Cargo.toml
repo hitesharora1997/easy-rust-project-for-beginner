@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 reqwest = { version = "0.10" , features = ["blocking","json"] }
-# This is a create used for getting the request 
+# This is a create used for getting the reqwest. 
 
 error-chain = "0.12.4"
-# This is a create used for getting the error 
+# This is a create used for getting the error handling
