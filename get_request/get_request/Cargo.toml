@@ -6,3 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+reqwest = { version = "0.10" , features = ["blocking","json"] }
+# This is a create used for getting the request 
+
+error-chain = "0.12.4"
+# This is a create used for getting the error 
