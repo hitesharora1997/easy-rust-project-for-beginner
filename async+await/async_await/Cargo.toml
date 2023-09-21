@@ -6,3 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+reqwest = {version = "0.11" , features = ["blocking" , "json"]}
+
+error-chain = "0.12.4"
+# for error handling
+
+tokio = {version = "1", features = ["full"]}
+# used for async_await 
