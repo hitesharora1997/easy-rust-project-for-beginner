@@ -1,0 +1,13 @@
+/home/hitesh/Rust/rust-projects/make_api_call/make_api_call/target/debug/deps/url-9d3ff8a44c27fbd2.rmeta: /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/lib.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/host.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/origin.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/parser.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/path_segments.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/slicing.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/quirks.rs
+
+/home/hitesh/Rust/rust-projects/make_api_call/make_api_call/target/debug/deps/liburl-9d3ff8a44c27fbd2.rlib: /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/lib.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/host.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/origin.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/parser.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/path_segments.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/slicing.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/quirks.rs
+
+/home/hitesh/Rust/rust-projects/make_api_call/make_api_call/target/debug/deps/url-9d3ff8a44c27fbd2.d: /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/lib.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/host.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/origin.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/parser.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/path_segments.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/slicing.rs /home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/quirks.rs
+
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/lib.rs:
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/host.rs:
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/origin.rs:
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/parser.rs:
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/path_segments.rs:
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/slicing.rs:
+/home/hitesh/.cargo/registry/src/github.com-1ecc6299db9ec823/url-2.4.1/src/quirks.rs:
