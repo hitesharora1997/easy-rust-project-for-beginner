@@ -23,8 +23,8 @@ jobs:
 
       - name: Build
         run: cargo build --verbose
-        working-directory: /home/hitesh/Rust/rust-projects/async+await/async_await
+        working-directory: /async+await/async_await
 
       - name: Run tests
         run: cargo test --verbose
-        working-directory: /home/hitesh/Rust/rust-projects/async+await/async_await
+        working-directory: /async+await/async_await
